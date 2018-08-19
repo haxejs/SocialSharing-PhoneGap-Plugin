@@ -268,7 +268,9 @@ public class SocialSharing extends CordovaPlugin {
               Uri fileUri = null;
               for (int i = 0; i < files.length(); i++) {
                 fileUri = getFileUriAndSetType(sendIntent, dir, files.getString(i), subject, i);
-                fileUri = FileProvider.getUriForFile(webView.getContext(), cordova.getActivity().getPackageName()+".sharing.provider", new File(fileUri.getPath()));
+                //fileUri = FileProvider.getUriForFile(webView.getContext(), cordova.getActivity().getPackageName()+".sharing.provider", new File(fileUri.getPath()));
+                //wechat share needs pics to be stored in photos media
+                fileUri = Uri.parse(MediaStore.Images.Media.insertImage(webView.getContext().getContentResolver(),fileUri.getPath(),"", subject));
                 fileUris.add(fileUri);
               }
               if (!fileUris.isEmpty()) {
