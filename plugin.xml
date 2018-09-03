@@ -49,6 +49,31 @@
       <string>This app requires photo library access to function properly.</string>
     </config-file>
 
+    <config-file parent="SocialSharingExcludeActivities" target="*-Info.plist">
+			<array>
+        <!-- 
+        <string>com.apple.UIKit.activity.PostToFacebook</string>
+        <string>com.apple.UIKit.activity.PostToTwitter</string>
+        <string>com.apple.UIKit.activity.PostToFlickr</string>
+        <string>com.apple.UIKit.activity.PostToWeibo</string>
+        <string>com.apple.UIKit.activity.PostToVimeo</string>
+        <string>com.apple.UIKit.activity.TencentWeibo</string>
+        <string>com.apple.UIKit.activity.SaveToCameraRoll</string>
+        <string>com.apple.UIKit.activity.Message</string>
+        -->
+        <string>com.apple.UIKit.activity.Mail</string>
+        <string>com.apple.UIKit.activity.AirDrop</string>
+        <string>com.apple.UIKit.activity.Print</string>
+        <string>com.apple.UIKit.activity.CopyToPasteboard</string>
+        <string>com.apple.UIKit.activity.AssignToContact</string>
+        <string>com.apple.UIKit.activity.AddToReadingList</string>
+        <string>com.apple.UIKit.activity.OpenInIBooks</string>
+        <string>com.apple.UIKit.activity.MarkupAsPDF</string>
+        <string>com.apple.reminders.RemindersEditorExtension</string>
+        <string>com.apple.mobilenotes.SharingExtension</string>
+      </array>
+		</config-file>
+
     <header-file src="src/ios/NSString+SSURLEncoding.h"/>
     <source-file src="src/ios/NSString+SSURLEncoding.m"/>
     <header-file src="src/ios/SocialSharing.h"/>
